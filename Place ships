@@ -5,10 +5,8 @@ def place_ship(number):
     while count < number:
         w = randint(0, size - 1)
         x = randint(0, size - 1)
-        ranpn = randint(-1, 1)
-        ranpn2 = randint(-1, 1)
-        y = w + ranpn
-        z = x + ranpn2
+        y = w + randint(-1, 1)
+        z = x + randint(-1, 1)
         #print(w,x,y,z)
         if (abs((w+x)-(y+z)) == 1) and (0 <= y <= (size-1)) and (0 <= z <= (size-1)):
             if board[w][x] == 'O' and board[y][z] == 'O':
